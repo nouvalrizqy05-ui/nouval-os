@@ -2,7 +2,7 @@
 <html lang="id">
 
 <head>
-    <title>Nouval OS - Portofolio</title>
+    <title>Nouval OS</title>
     <link rel="icon" type="image/x-icon" href="../static/icons/cursor.ico" />
 
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 <body dir="ltr" style="overflow: hidden;" id="body">
     <aside>
         <div class='apps' id="about-me_app"><img src='../static/imgs/icons/about-me.webp'>
-            <p>Tentang Saya</p>
+            <p>Tentang saya</p>
         </div>
         <div class='apps' id="experience_app"><img src='../static/imgs/icons/experience.webp'>
             <p style="text-align: center;">Pengalaman</p>
@@ -29,129 +29,488 @@
             <p>Resume</p>
         </div>
         <div class='apps' id="credits_app"><img src='../static/imgs/icons/credits.webp'>
-            <p>Keahlian</p>
+            <p>Kredit</p>
         </div>
         <div class='apps' id="project_app"><img src='../static/imgs/icons/projects.webp'>
             <p>Proyek</p>
         </div>
     </aside>
-
     <footer style="z-index:9999999" id="footer">
         <section id="windows-icon-section" class="taskbar-hover windows-hover">
-            <svg id="windows-icon" viewBox="0 0 150 150" width="24px" height="24px" style="width: 1.5rem; height: auto;">
-                <path color="#ffffff" fill="#ffffff" d="M 59.554688 23.28125 L 14.554688 30.03125 C 13.085938 30.253906 12 31.515625 12 33 L 12 69 C 12 70.660156 13.34375 72 15 72 L 60 72 C 61.65625 72 63 70.660156 63 69 L 63 26.25 C 63 25.378906 62.617188 24.550781 61.957031 23.976562 C 61.296875 23.410156 60.417969 23.164062 59.554688 23.28125 Z M 136.957031 12.726562 C 136.296875 12.160156 135.421875 11.914062 134.554688 12.03125 L 71.554688 21.484375 C 70.085938 21.703125 69 22.964844 69 24.449219 L 69 69 C 69 70.660156 70.34375 72 72 72 L 135 72 C 136.65625 72 138 70.660156 138 69 L 138 15 C 138 14.128906 137.617188 13.300781 136.957031 12.726562 Z M 60 78 L 15 78 C 13.34375 78 12 79.339844 12 81 L 12 117 C 12 118.484375 13.085938 119.746094 14.554688 119.96875 L 59.554688 126.71875 C 59.707031 126.738281 59.851562 126.75 60 126.75 C 60.714844 126.75 61.410156 126.496094 61.957031 126.023438 C 62.617188 125.449219 63 124.621094 63 123.75 L 63 81 C 63 79.339844 61.65625 78 60 78 Z M 135 78 L 72 78 C 70.34375 78 69 79.339844 69 81 L 69 125.550781 C 69 127.035156 70.085938 128.296875 71.554688 128.515625 L 134.554688 137.96875 C 134.703125 137.988281 134.851562 138 135 138 C 135.714844 138 136.410156 137.746094 136.957031 137.273438 C 137.617188 136.699219 138 135.871094 138 135 L 138 81 C 138 79.339844 136.65625 78 135 78 Z M 135 78 " />
+            <svg id="windows-icon" viewBox="0 0 150 150" width="24px" height="24px"
+                style="width: 1.5rem; height: auto; ">
+                <path color="#ffffff" fill="#ffffff"
+                    d="M 59.554688 23.28125 L 14.554688 30.03125 C 13.085938 30.253906 12 31.515625 12 33 L 12 69 C 12 70.660156 13.34375 72 15 72 L 60 72 C 61.65625 72 63 70.660156 63 69 L 63 26.25 C 63 25.378906 62.617188 24.550781 61.957031 23.976562 C 61.296875 23.410156 60.417969 23.164062 59.554688 23.28125 Z M 136.957031 12.726562 C 136.296875 12.160156 135.421875 11.914062 134.554688 12.03125 L 71.554688 21.484375 C 70.085938 21.703125 69 22.964844 69 24.449219 L 69 69 C 69 70.660156 70.34375 72 72 72 L 135 72 C 136.65625 72 138 70.660156 138 69 L 138 15 C 138 14.128906 137.617188 13.300781 136.957031 12.726562 Z M 60 78 L 15 78 C 13.34375 78 12 79.339844 12 81 L 12 117 C 12 118.484375 13.085938 119.746094 14.554688 119.96875 L 59.554688 126.71875 C 59.707031 126.738281 59.851562 126.75 60 126.75 C 60.714844 126.75 61.410156 126.496094 61.957031 126.023438 C 62.617188 125.449219 63 124.621094 63 123.75 L 63 81 C 63 79.339844 61.65625 78 60 78 Z M 135 78 L 72 78 C 70.34375 78 69 79.339844 69 81 L 69 125.550781 C 69 127.035156 70.085938 128.296875 71.554688 128.515625 L 134.554688 137.96875 C 134.703125 137.988281 134.851562 138 135 138 C 135.714844 138 136.410156 137.746094 136.957031 137.273438 C 137.617188 136.699219 138 135.871094 138 135 L 138 81 C 138 79.339844 136.65625 78 135 78 Z M 135 78 " />
+
             </svg>
         </section>
 
         <article class="open-windows-menu">
             <section class="left-panel">
                 <section class="start left-panel-hover">
-                    <p style="font-size: 1.4em; margin-bottom: 0px; padding-left: 10px;">Menu Utama</p>
+                    <svg viewBox="0 0 150 150" width="24px" height="24px" style="padding-top: 10px;">
+                        <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
+                            d="M 8 44 L 88 44 L 88 52 L 8 52 Z M 8 20 L 88 20 L 88 28 L 8 28 Z M 8 68 L 88 68 L 88 76 L 8 76 Z M 8 68 " />
+                    </svg>
+                    <p style="font-size: 1.4em; margin-bottom: 0px;">Mulai</p>
                 </section>
                 <section class="details">
                     <section class="left-bottom-panel left-panel-hover">
-                        <img src="../static/imgs/about-me/profile.jpeg" alt="profile">
-                        <p style="font-size: 1.1em; margin-bottom: 0px;">M. Nouval Ar-Rizqy</p>
+                        <img src="../static/imgs/about-me/profile.jpeg" alt="profil">
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">M. Nouval Ar-Rizqy</p>
                     </section>
                     <section class="left-bottom-panel left-panel-hover">
-                        <p style="font-size: 1.1em; margin-bottom: 0px;">Dokumen Proyek</p>
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 477.867 477.867"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path
+                                d="M421.649,90.317L336.316,4.983c-1.589-1.593-3.481-2.852-5.564-3.703c-2.059-0.841-4.261-1.276-6.485-1.28H102.4    C74.123,0,51.2,22.923,51.2,51.2v375.467c0,28.277,22.923,51.2,51.2,51.2h273.067c28.277,0,51.2-22.923,51.2-51.2V102.4    C426.643,97.87,424.841,93.531,421.649,90.317z M341.333,58.266l27.068,27.068h-27.068V58.266z M392.533,426.667    c0,9.426-7.641,17.067-17.067,17.067H102.4c-9.426,0-17.067-7.641-17.067-17.067V51.2c0-9.426,7.641-17.067,17.067-17.067h204.8    V102.4c0,9.426,7.641,17.067,17.067,17.067h68.267V426.667z"
+                                fill="#ffffff" data-original="#000000" class="" />
+                        </svg>
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">Dokumen</p>
                     </section>
+
                     <section class="left-bottom-panel left-panel-hover">
-                        <p style="font-size: 1.1em; margin-bottom: 0px;">Pengaturan</p>
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 265.257 265.257"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve">
+                            <path
+                                d="M247.757,27.677H17.5c-9.649,0-17.5,7.851-17.5,17.5V220.08c0,9.65,7.851,17.5,17.5,17.5h230.257   c9.649,0,17.5-7.85,17.5-17.5V45.177C265.257,35.528,257.407,27.677,247.757,27.677z M17.5,42.677h230.257   c1.355,0,2.5,1.145,2.5,2.5v116.474l-40.108-51.474c-2.976-3.819-7.332-6.108-11.952-6.278c-4.619-0.173-9.132,1.791-12.382,5.382   l-52.039,57.512c-1.253,1.384-4.033,1.766-5.614,0.772l-42.788-26.946c-7.332-4.619-18.063-4.143-24.958,1.105L15,176.288V45.177   C15,43.822,16.145,42.677,17.5,42.677z M247.757,222.58H17.5c-1.355,0-2.5-1.145-2.5-2.5v-24.942l54.501-41.478   c1.893-1.44,5.87-1.616,7.881-0.349l42.788,26.946c7.734,4.871,18.596,3.377,24.729-3.4l52.039-57.512   c0.312-0.345,0.535-0.45,0.708-0.457c0.131,0.005,0.385,0.141,0.671,0.508l51.94,66.658v34.025   C250.257,221.435,249.112,222.58,247.757,222.58z"
+                                fill="#ffffff" data-original="#000002" />
+                            <path
+                                d="M110.843,129.224c14.649,0,26.566-11.917,26.566-26.566s-11.918-26.566-26.566-26.566   c-14.649,0-26.566,11.918-26.566,26.566S96.194,129.224,110.843,129.224z M110.843,91.091c6.378,0,11.566,5.188,11.566,11.566   c0,6.378-5.188,11.566-11.566,11.566c-6.378,0-11.566-5.188-11.566-11.566C99.277,96.28,104.465,91.091,110.843,91.091z"
+                                fill="#ffffff" data-original="#000002" />
+                        </svg>
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">Gambar</p>
+                    </section>
+
+                    <section class="left-bottom-panel left-panel-hover">
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m272.066 512h-32.133c-25.989 0-47.134-21.144-47.134-47.133v-10.871c-11.049-3.53-21.784-7.986-32.097-13.323l-7.704 7.704c-18.659 18.682-48.548 18.134-66.665-.007l-22.711-22.71c-18.149-18.129-18.671-48.008.006-66.665l7.698-7.698c-5.337-10.313-9.792-21.046-13.323-32.097h-10.87c-25.988 0-47.133-21.144-47.133-47.133v-32.134c0-25.989 21.145-47.133 47.134-47.133h10.87c3.531-11.05 7.986-21.784 13.323-32.097l-7.704-7.703c-18.666-18.646-18.151-48.528.006-66.665l22.713-22.712c18.159-18.184 48.041-18.638 66.664.006l7.697 7.697c10.313-5.336 21.048-9.792 32.097-13.323v-10.87c0-25.989 21.144-47.133 47.134-47.133h32.133c25.989 0 47.133 21.144 47.133 47.133v10.871c11.049 3.53 21.784 7.986 32.097 13.323l7.704-7.704c18.659-18.682 48.548-18.134 66.665.007l22.711 22.71c18.149 18.129 18.671 48.008-.006 66.665l-7.698 7.698c5.337 10.313 9.792 21.046 13.323 32.097h10.87c25.989 0 47.134 21.144 47.134 47.133v32.134c0 25.989-21.145 47.133-47.134 47.133h-10.87c-3.531 11.05-7.986 21.784-13.323 32.097l7.704 7.704c18.666 18.646 18.151 48.528-.006 66.665l-22.713 22.712c-18.159 18.184-48.041 18.638-66.664-.006l-7.697-7.697c-10.313 5.336-21.048 9.792-32.097 13.323v10.871c0 25.987-21.144 47.131-47.134 47.131zm-106.349-102.83c14.327 8.473 29.747 14.874 45.831 19.025 6.624 1.709 11.252 7.683 11.252 14.524v22.148c0 9.447 7.687 17.133 17.134 17.133h32.133c9.447 0 17.134-7.686 17.134-17.133v-22.148c0-6.841 4.628-12.815 11.252-14.524 16.084-4.151 31.504-10.552 45.831-19.025 5.895-3.486 13.4-2.538 18.243 2.305l15.688 15.689c6.764 6.772 17.626 6.615 24.224.007l22.727-22.726c6.582-6.574 6.802-17.438.006-24.225l-15.695-15.695c-4.842-4.842-5.79-12.348-2.305-18.242 8.473-14.326 14.873-29.746 19.024-45.831 1.71-6.624 7.684-11.251 14.524-11.251h22.147c9.447 0 17.134-7.686 17.134-17.133v-32.134c0-9.447-7.687-17.133-17.134-17.133h-22.147c-6.841 0-12.814-4.628-14.524-11.251-4.151-16.085-10.552-31.505-19.024-45.831-3.485-5.894-2.537-13.4 2.305-18.242l15.689-15.689c6.782-6.774 6.605-17.634.006-24.225l-22.725-22.725c-6.587-6.596-17.451-6.789-24.225-.006l-15.694 15.695c-4.842 4.843-12.35 5.791-18.243 2.305-14.327-8.473-29.747-14.874-45.831-19.025-6.624-1.709-11.252-7.683-11.252-14.524v-22.15c0-9.447-7.687-17.133-17.134-17.133h-32.133c-9.447 0-17.134 7.686-17.134 17.133v22.148c0 6.841-4.628 12.815-11.252 14.524-16.084 4.151-31.504 10.552-45.831 19.025-5.896 3.485-13.401 2.537-18.243-2.305l-15.688-15.689c-6.764-6.772-17.627-6.615-24.224-.007l-22.727 22.726c-6.582 6.574-6.802 17.437-.006 24.225l15.695 15.695c4.842 4.842 5.79 12.348 2.305 18.242-8.473 14.326-14.873 29.746-19.024 45.831-1.71 6.624-7.684 11.251-14.524 11.251h-22.148c-9.447.001-17.134 7.687-17.134 17.134v32.134c0 9.447 7.687 17.133 17.134 17.133h22.147c6.841 0 12.814 4.628 14.524 11.251 4.151 16.085 10.552 31.505 19.024 45.831 3.485 5.894 2.537 13.4-2.305 18.242l-15.689 15.689c-6.782 6.774-6.605 17.634-.006 24.225l22.725 22.725c6.587 6.596 17.451 6.789 24.225.006l15.694-15.695c3.568-3.567 10.991-6.594 18.244-2.304z"
+                                fill="#ffffff" data-original="#000000" class="" />
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="m256 367.4c-61.427 0-111.4-49.974-111.4-111.4s49.973-111.4 111.4-111.4 111.4 49.974 111.4 111.4-49.973 111.4-111.4 111.4zm0-192.8c-44.885 0-81.4 36.516-81.4 81.4s36.516 81.4 81.4 81.4 81.4-36.516 81.4-81.4-36.515-81.4-81.4-81.4z"
+                                fill="#ffffff" data-original="#000000" class="" />
+                        </svg>
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">Pengaturan</p>
+                    </section>
+
+                    <section class="left-bottom-panel left-panel-hover">
+                        <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                            <path
+                                d="M336.709,74.843c-10.322-3.944-21.88,1.219-25.825,11.537c-3.945,10.316,1.22,21.879,11.536,25.824    C393.115,139.239,442,207.384,442,286c0,102.561-83.439,186-186,186S70,388.561,70,286c0-78.659,48.908-146.766,119.573-173.793    c10.317-3.946,15.481-15.509,11.536-25.825c-3.947-10.317-15.512-15.48-25.825-11.536C89.185,107.777,30,190.692,30,286    c0,124.922,101.09,226,226,226c124.922,0,226-101.09,226-226C482,190.65,422.778,107.759,336.709,74.843z"
+                                fill="#ffffff" data-original="#000000" class="" />
+                            <path
+                                d="M256,0c-11.046,0-20,8.954-20,20v195.851c0,11.046,8.954,20,20,20s20-8.955,20-20V20C276,8.954,267.046,0,256,0z"
+                                fill="#ffffff" data-original="#000000" class="" />
+                        </svg>
+                        <p style="font-size: 1.4em; margin-bottom: 0px;">Daya</p>
                     </section>
                 </section>
             </section>
+
+            <section class="middle-panel">
+            </section>
+            <section class="right-panel">
+
+            </section>
         </article>
+
+
 
         <section class="pinned-apps">
             <div class="taskbar-app taskbar-hover" id="about-me_bottom">
-                <img src="../static/imgs/icons/about-me.webp" alt="Tentang" />
+                <img src="../static/imgs/icons/about-me.webp" alt="Tentang saya" />
             </div>
             <div class="taskbar-app taskbar-hover" id="experience_bottom">
                 <img src="../static/imgs/icons/experience.webp" alt="Pengalaman" />
             </div>
+            <div class="taskbar-app taskbar-hover" id="contact_bottom">
+                <img src="../static/imgs/icons/contact.webp" alt="Kontak" />
+            </div>
+            <div class="taskbar-app taskbar-hover" id="credits_bottom">
+                <img src="../static/imgs/icons/credits.webp" alt="Kredit" />
+            </div>
         </section>
 
-        <section class="date-section taskbar-hover">
-            <time id="hours-minutes"></time>
-            <time id="current-date"></time>
-        </section>
+
+        <article class="small-taskbar-info" style="position:fixed; right:0; width: 245px;">
+            <section class="shown-apps">
+                <span id="expand-other-apps" class="taskbar-hover">
+                    <svg width="16" height="16" x="0" y="0" viewBox="0 0 490.8 490.8"
+                        style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="M135.685,3.128c-4.237-4.093-10.99-3.975-15.083,0.262c-3.992,4.134-3.992,10.687,0,14.82  l227.115,227.136L120.581,472.461c-4.237,4.093-4.354,10.845-0.262,15.083c4.093,4.237,10.845,4.354,15.083,0.262  c0.089-0.086,0.176-0.173,0.262-0.262l234.667-234.667c4.164-4.165,4.164-10.917,0-15.083L135.685,3.128z"
+                            fill="#ffffff" data-original="#f44336" class="" />
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="M128.133,490.68c-5.891,0.011-10.675-4.757-10.686-10.648c-0.005-2.84,1.123-5.565,3.134-7.571l227.136-227.115  L120.581,18.232c-4.171-4.171-4.171-10.933,0-15.104c4.171-4.171,10.933-4.171,15.104,0l234.667,234.667  c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.68,128.133,490.68z"
+                            fill="#ffffff" data-original="#000000" class="" />
+
+                    </svg>
+                </span>
+                <div class="image-container-win taskbar-hover">
+                    <svg class="taskbar-hover" width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                        <path d="M56.5,126.354V197H0v118h56.5v70.647H512V126.354H56.5z M474.5,348h-380V164h380V348z"
+                            fill="#ffffff" data-original="#000000" />
+                        <rect x="124.5" y="194" width="320" height="124" fill="#ffffff" data-original="#000000" />
+                    </svg>
+                </div>
+                <div class="image-container-win taskbar-hover">
+                    <svg width="16" height="16" x="0" y="0" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 16 16" xml:space="preserve" class="">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="m60 512c33.089844 0 61-26.910156 61-60s-27.910156-61-61-61-60 27.910156-60 61 26.910156 60 60 60zm0 0"
+                            fill="#ffffff" data-original="#000000" class="" />
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="m15 300h30c91.125 0 167 75.871094 167 167v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-124.265625-102.734375-227-227-227h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15zm0 0"
+                            fill="#ffffff" data-original="#000000" class="" />
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="m15 180h30c157.402344 0 287 129.597656 287 287v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-190.539062-156.460938-347-347-347h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15zm0 0"
+                            fill="#ffffff" data-original="#000000" class="" />
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="m45 0h-30c-8.285156 0-15 6.714844-15 15v30c0 8.285156 6.714844 15 15 15h30c223.675781 0 407 183.324219 407 407v30c0 8.285156 6.714844 15 15 15h30c8.285156 0 15-6.714844 15-15v-30c0-256.8125-210.1875-467-467-467zm0 0"
+                            fill="#ffffff" data-original="#000000" class="" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="date-section taskbar-hover">
+                <time id="hours-minutes" datetime=""></time>
+                <time id="current-date" datetime=""></time>
+            </section>
+
+            <section class="notifications-bar taskbar-hover">
+                <img src="../static/imgs/icons/notification.webp" alt="" />
+            </section>
+
+            <section class="show-desktop taskbar-hover">
+                <hr />
+            </section>
+        </article>
     </footer>
 
     <div id="about-me" class="about-me" style="display: none;">
         <div class="title-bar" id="titleBar">
-            <div class="title">Tentang Saya - @nouvalarr_rgh</div>
+            <div class="title">Tentang saya</div>
             <div class="window-controls">
+                <div class="window-button restore"></div>
+                <div class="window-button minimize"></div>
                 <div class="window-button close"></div>
             </div>
         </div>
+        <nav class="navbar bg-black" style="display: flex; justify-content: center;">
+            <div class="container">
+                <div id="nav-bar" class="row col-9">
+                    <div id="logo-div" class="col mt-2"> Tentang saya
+                    </div>
+                    <div class="col mt-1 d-flex align-items-center justify-content-center">
+                        <input id="search-bar" class="form-control" type="search" placeholder="Cari">
+                    </div>
+                    <div id="nav-buttons" class="col d-flex align-items-center gap-2">
+                        <img class="ms-2" id="profile" src="../static/imgs/about-me/profile.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="content">
             <div style="margin: 0% 12%;">
-                <section class="border-bottom p-0 mt-4 bg-black">
-                    <article class="bg-black text-white">
-                        <div class="p-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
-                                <div class="ps-2">
-                                    <span id="post-nick">nouvalarr_rgh</span><br>
-                                    <small>Indramayu, Indonesia</small>
+                <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                    <article class="bg-black">
+                        <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                            <div style="display: flex;">
+                                <div>
+                                    <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
                                 </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <label class="d-inline ps-2">
+                                        <span id="post-nick">nouvalarr_rgh</span>
+                                    </label>
+                                    <label class="d-inline ps-2">
+                                        <span id="show-comments">Masa Kecil</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <svg id="dots" aria-label="Opsi lainnya" class="_8-yf5 " color="white" fill="white"
+                                    height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <circle cx="12" cy="12" r="1.5"></circle>
+                                    <circle cx="6.5" cy="12" r="1.5"></circle>
+                                    <circle cx="17.5" cy="12" r="1.5"></circle>
+                                </svg>
                             </div>
                         </div>
                         <div class="image-container">
-                            <img class="post" src="../static/imgs/about-me/childhood.webp" alt="Masa Kecil">
+                            <img class="post" src="../static/imgs/about-me/childhood.webp" id="post_1" alt="">
+                            <div class="next-photo" id="next_1"></div>
+                            <div class="prev-photo" id="prev_1"></div>
+
                         </div>
-                        <div class="p-3">
-                            <h6>nouvalarr_rgh</h6>
-                            <p>Berawal dari Indramayu, rasa penasaran saya terhadap dunia digital sudah muncul sejak kecil. Saya selalu tertarik bagaimana sebuah logika sederhana bisa membangun sesuatu yang besar. 👶✨</p>
-                            <small class="text-muted">10 JANUARI 2004</small>
-                        </div>
+                        <div id="bottom-bar">
+                            <div class="mt-3">
+
+                                <svg class="buttons" id="like_1" aria-label="Suka" color="#ffffff" fill="#ffffff"
+                                    height="24" role="img" viewBox="0 0 48 48" width="24">
+                                    <path
+                                        d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                    </path>
+                                </svg>
+                                </div>
+
+                            <div class="d-flex mt-2 ms-2 ps-2">
+                                <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/family.webp" alt="">
+                                <p>Disukai oleh <span id="weight-600">ibu</span> dan <span id="weight-600">1.256 lainnya</span></p>
+                            </div>
+                            <div class="lh-1" style="margin: 0%  2%;">
+                                <div class="d-flex flex-wrap">
+                                    <h6 class="ms-1">nouvalarr_rgh</h6>
+                                    <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                        Halo semuanya! 👋 Saya Nouval. Saya lahir dan dibesarkan di Indramayu, Indonesia. 
+                                        Sebuah kota yang memberikan saya ketenangan untuk tumbuh.<br><br> 
+                                        Sejak kecil, orang tua saya selalu bilang bahwa saya adalah anak yang punya rasa ingin tahu tinggi. 
+                                        Logika-logika sederhana selalu membuat saya bersemangat untuk belajar hal baru. 👶.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p id="show-comments" class="ms-1">Lihat semua 182 komentar</p>
+                                </div>
+                                <div class="d-flex justify-content-between pe-4">
+                                    <div class="d-flex">
+                                        <h6 class="ms-1">ibu</h6>
+                                        <p class="ms-1">Lucunya anak ibu!</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p id="time-info" class="ms-1">10 JANUARI 2004</p>
+                                </div>
+                            </div>
                     </article>
                 </section>
 
-                <section class="border-bottom p-0 mt-4 bg-black">
-                    <article class="bg-black text-white">
-                        <div class="p-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
-                                <div class="ps-2">
-                                    <span id="post-nick">nouvalarr_rgh</span><br>
-                                    <small>Organisasi Santri (OSMI)</small>
+                <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                    <article class="bg-black">
+                        <div id="post-top-bar" class="p-2 d-flex justify-content-between">
+                            <div style="display: flex;">
+                                <div>
+                                    <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
                                 </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <label class="d-inline ps-2">
+                                        <span id="post-nick">nouvalarr_rgh</span>
+                                    </label>
+                                    <label class="d-inline ps-2">
+                                        <span id="show-comments">Masa Remaja & Organisasi</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <svg id="dots" aria-label="Opsi lainnya" class="_8-yf5 " color="white" fill="white"
+                                    height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <circle cx="12" cy="12" r="1.5"></circle>
+                                    <circle cx="6.5" cy="12" r="1.5"></circle>
+                                    <circle cx="17.5" cy="12" r="1.5"></circle>
+                                </svg>
                             </div>
                         </div>
                         <div class="image-container">
-                            <img class="post" src="../static/imgs/about-me/teenage.webp" alt="Masa Remaja">
+                            <img class="post" src="../static/imgs/about-me/teenage.webp" id="post_2" alt="">
+                            <div class="next-photo" id="next_2"></div>
+                            <div class="prev-photo" id="prev_2"></div>
                         </div>
-                        <div class="p-3">
-                            <h6>nouvalarr_rgh</h6>
-                            <p>Masa sekolah adalah tempat saya belajar kedisiplinan. Menjadi Sekretaris di OSMI dan aktif di Pramuka (Ankuperkap) mengajarkan saya bekerja secara sistematis dan kolaboratif. Soft skill yang sangat krusial di dunia programming. 📋🛡️</p>
-                            <small class="text-muted">23 OKTOBER 2022</small>
-                        </div>
+                        <div id="bottom-bar">
+                            <div class="mt-3">
+                                <svg class="buttons" id="like_2" aria-label="Suka" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                    <path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
+                                </svg>
+                            </div>
+
+                            <div class="d-flex mt-2 ms-2 ps-2">
+                                <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/osmi.webp" alt="">
+                                <p>Disukai oleh <span id="weight-600">rekan_organisasi</span> dan <span id="weight-600">678 lainnya</span></p>
+                            </div>
+                            <div class="lh-1" style="margin: 0%  2%;">
+                                <div class="d-flex flex-wrap">
+                                    <h6 class="ms-1">nouvalarr_rgh</h6>
+                                    <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                        Selama masa sekolah, saya aktif di OSMI (Sekretaris) dan Pramuka (Ankuperkap). 
+                                        Pengalaman mengelola administrasi surat-menyurat dan inventaris perlengkapan 
+                                        mengajarkan saya arti kedisiplinan dan kerja sistematis. <br><br>
+                                        Momen-momen dokumentasi visual bersama tim OSMI juga mengasah sisi kreatif saya. 📸📋
+                                    </p>
+                                </div>
+                                <div>
+                                    <p id="show-comments" class="ms-1">Lihat semua 32 komentar</p>
+                                </div>
+                                <div class="d-flex justify-content-between pe-4">
+                                    <div class="d-flex">
+                                        <h6 class="ms-1">teman</h6>
+                                        <p class="ms-1">Sekretaris teladan kita! 🤹‍♀️</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p id="time-info" class="ms-1">23 OKTOBER 2022</p>
+                                </div>
+                            </div>
                     </article>
                 </section>
 
-                <section class="border-bottom p-0 mt-4 bg-black">
-                    <article class="bg-black text-white">
-                        <div class="p-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
-                                <div class="ps-2">
-                                    <span id="post-nick">nouvalarr_rgh</span><br>
-                                    <small>Universitas Negeri Semarang</small>
+                <section id="post-side" class="border-bottom p-0 mt-4 bg-black">
+                    <article class="bg-black">
+                        <div id="post-top-bar" class="p-2 d-flex justify-content-between align-items-center">
+                            <div style="display: flex;">
+                                <div>
+                                    <img id="post-profile-story" src="../static/imgs/about-me/profile.jpeg" alt="">
                                 </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <label class="d-inline ps-2">
+                                        <span id="post-nick">nouvalarr_rgh</span>
+                                    </label>
+                                    <label class="d-inline ps-2">
+                                        <span id="show-comments">Masa Kuliah & Minat 3D</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <svg id="dots" aria-label="Opsi lainnya" class="_8-yf5 " color="white" fill="white"
+                                    height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <circle cx="12" cy="12" r="1.5"></circle>
+                                    <circle cx="6.5" cy="12" r="1.5"></circle>
+                                    <circle cx="17.5" cy="12" r="1.5"></circle>
+                                </svg>
                             </div>
                         </div>
                         <div class="image-container">
-                            <img class="post" src="../static/imgs/about-me/uni.webp" alt="Kuliah">
+                            <img class="post" src="../static/imgs/about-me/unnes.webp" id="post_3" alt="">
+                            <div class="next-photo" id="next_3"></div>
+                            <div class="prev-photo" id="prev_3"></div>
                         </div>
-                        <div class="p-3">
-                            <h6>nouvalarr_rgh</h6>
-                            <p>Sekarang sebagai mahasiswa Teknik Informatika UNNES, saya mendalami Web Development. Hobi baru saya? Eksplorasi **3D Web Development**. Menggabungkan kode dengan visual imersif adalah masa depan! 💻🌐🚀</p>
-                            <small class="text-muted">1 SEPTEMBER 2025</small>
-                        </div>
+                        <div id="bottom-bar">
+                            <div class="mt-3">
+                                <svg class="buttons" id="like_3" aria-label="Suka" color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24">
+                                    <path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
+                                </svg>
+                            </div>
+
+                            <div class="d-flex mt-2 ms-2 ps-2">
+                                <img class="border me-2" id="subtitle-profile" src="../static/imgs/about-me/unnes_logo.webp" alt="">
+                                <p>Disukai oleh <span id="weight-600">unnes</span> dan <span id="weight-600">901 lainnya</span></p>
+                            </div>
+                            <div class="lh-1" style="margin: 0%  2%;">
+                                <div class="d-flex flex-wrap">
+                                    <h6 class="ms-1">nouvalarr_rgh</h6>
+                                    <p style="text-align: justify;  flex-basis: 100%; line-height: 1.5;" class="ms-1">
+                                        Memasuki dunia perkuliahan di S1 Teknik Informatika Universitas Negeri Semarang (UNNES), 
+                                        fokus saya semakin tajam pada pengembangan perangkat lunak.<br><br>
+                                        Selain mendalami algoritma dan struktur data, saya menemukan hobi dan minat baru yang sangat menarik: 
+                                        **3D Web Development**. Menggabungkan logika pemrograman dengan visual interaktif 3D adalah 
+                                        tantangan yang ingin terus saya eksplorasi. 🎮💻✨
+                                    </p>
+                                </div>
+                                <div>
+                                    <p id="show-comments" class="ms-1">Lihat semua 145 komentar</p>
+                                </div>
+                                <div class="d-flex justify-content-between pe-4">
+                                    <div class="d-flex">
+                                        <h6 class="ms-1">dosen</h6>
+                                        <p class="ms-1">Terus berkarya, Nouval!</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p id="time-info" class="ms-1">SEPTEMBER 2025</p>
+                                </div>
+                            </div>
                     </article>
                 </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="credits" class="credits" style="display: none;">
+        <div class="title-bar" id="titleBar">
+            <div class="title">Kredit & Keahlian</div>
+            <div class="window-controls">
+                <div class="window-button restore"></div>
+                <div class="window-button minimize"></div>
+                <div class="window-button close"></div>
+            </div>
+        </div>
+        <div id="credits-content" style="font-family: Consolas, monospace; font-size: 13px;" class="content text-white">
+            Nouval OS [Versi 10.01.2026]<br>
+            (c) Nouval OS. Hak cipta dilindungi.<br><br>
+            C:\Users\Nouval\Documents\Skills&gt; ls<br><br>
+            <div id="credits_credits" style="display: block;">
+                <pre style="font-family: Consolas, monospace; font-size: 13px; overflow: hidden; display: flex;">
+                    <a id="credits_button" class="credits-selected">Keahlian</a>
+                    <a id="inspiration_button" class="credits-section">Sertifikasi</a>
+                    <a id="resources_button" class="credits-section" >Alat</a>
+                    <a id="special_thanks_button" class="credits-section">Terima Kasih</a>
+                </pre>
+                C:\Users\Nouval\Documents\Skills&gt; cat Keahlian<br><br>
+                <div style="text-align: center; font-size: 13px; font-family: Consolas, monospace;">
+                    Pengembangan Perangkat Lunak<br><br>
+                    <span style="margin-left:150px; float: left;">Front-end & Back-end</span>
+                    <span style="margin-right:150px;float: right;">JS, HTML, CSS</span><br>
+                    <span style="margin-left:150px; float: left;">Manajemen Database</span>
+                    <span style="margin-right:150px;float: right;">PgAdmin 4, SQL</span><br>
+                    <span style="margin-left:150px; float: left;">UI/UX & Desain Web</span>
+                    <span style="margin-right:150px;float: right;">Figma, Wix</span><br><br>
+                    Lainnya<br><br>
+                    Pemecahan Masalah <br>Bahasa Inggris Aktif <br>Kolaborasi Tim <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact" style="display: none;">
+        <div class="title-bar" id="titleBar" style="background-color: #0078d7;">
+            <div class="title">Kontak</div>
+            <div class="window-controls">
+                <div class="window-button-blue restore"></div>
+                <div class="window-button-blue minimize"></div>
+                <div class="window-button close"></div>
+            </div>
+        </div>
+        <div id="contact-content" style="font-family: Consolas, monospace; font-size: 13px;" class="content-light">
+            <p style="text-align: center;margin: 10px 10px; font-weight: bold; font-size:60px; color:black;">Hubungi Saya!
+            </p>
+            <p style="text-align: center;margin: 10px 10px; font-weight: bold; color:black;">Apakah Anda memiliki
+                pertanyaan? Saya siap mendengarkan! Isi formulir di bawah atau kirim email langsung ke <a
+                    href="mailto:bagobago955@gmail.com">bagobago955@gmail.com</a>.</p>
+
+            <form id="form-contact">
+                <label for="nombre">Nama</label>
+                <input type="text" id="form-name" name="nombre" required placeholder="Nama Anda">
+
+                <label for="email">Email Anda</label>
+                <input type="email" id="form-mail" name="email" required placeholder="contoh@mail.com">
+
+                <label for="mensaje">Pesan</label>
+                <textarea id="form-message" name="mensaje" rows="4" required placeholder="Pesan Anda"></textarea>
+                <div style="display: flex; align-items: center;">
+                    <input type="submit" value="Kirim Pesan">
+                    <p id="message_contact_success" style="margin: 10px 10px; font-weight: bold; display: none;">Pesan Anda telah terkirim!</p>
+                </div>
+            </form>
+            <p style="text-align: center;margin: 10px 10px; ">Semua pesan dikirim langsung ke akun pribadi saya:
+                <a href="mailto:bagobago955@gmail.com">bagobago955@gmail.com</a>
+            </p><br>
+
+            <div style="text-align: center;">
+                <a href="https://muhammadnouvalarrizqy.vercel.app" target="_blank" style="color: #0078d7;">
+                    <ion-icon style="margin:0 10px" size="large" name="globe-outline"></ion-icon>
+                </a>
+                <a href="#" target="_blank" style="color: #0078d7;">
+                    <ion-icon style="margin:0 10px" size="large" name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" target="_blank" style="color: #0078d7;">
+                    <ion-icon style="margin:0 10px" size="large" name="logo-github"></ion-icon>
+                </a>
+                <a href="mailto:bagobago955@gmail.com" target="_blank" style="color: #0078d7;">
+                    <ion-icon style="margin:0 10px" size="large" name="mail-outline"></ion-icon>
+                </a>
             </div>
         </div>
     </div>
@@ -160,76 +519,64 @@
         <div class="title-bar" id="titleBar" style="background-color: black;">
             <div class="title">Pengalaman & Proyek</div>
             <div class="window-controls">
+                <div class="window-button restore"></div>
+                <div class="window-button minimize"></div>
                 <div class="window-button close"></div>
             </div>
         </div>
-        <div class="content" style="background-color: #141414; color: white; padding: 20px;">
-            <h2 style="color: #de1310; font-family: 'BebasNeue', sans-serif;">PROYEK UNGGULAN</h2>
-            <hr>
-            <div class="mb-4">
-                <h4>Sistem Manajemen Produktivitas</h4>
-                <p class="text-muted">Tech Stack: HTML, CSS, JavaScript, PgAdmin 4 (SQL)</p>
-                <p>Merancang sistem terintegrasi untuk membantu mahasiswa mengelola tugas akademik dan aktivitas harian secara efisien dengan manajemen database SQL.</p>
-            </div>
-            <div class="mb-4">
-                <h4>Platform Bimbingan Belajar UTBK</h4>
-                <p class="text-muted">Web-based Platform</p>
-                <p>Mengembangkan antarmuka pembelajaran yang interaktif untuk persiapan ujian masuk perguruan tinggi nasional.</p>
+        <div id="experience-content" class="content"
+            style="background-color: #141414; padding-top: 0; padding-left: 0; padding-right: 0; ">
+            <header>
+                <div style="display: inline-flex;">
+                    <p id="experience-title">PENGALAMAN</p>
+                    <nav class="links">
+                        <ul>
+                            <li><a>Beranda</a></li>
+                            <li><a>Pengalaman</a></li>
+                            <li><a>Proyek Saya</a></li>
+                            <li><a>Prestasi</a></li>
+                            <li><a>Kontak</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img class="header-image" src="../static/imgs/experience/smiley.webp" alt="Smiley">
+            </header>
+            <div class="company-selection">
+                <div class="company-logo" id="floorfy_company_logo">
+                    <p style="color: white; padding-top: 15px;">PROYEK</p>
+                </div>
+                <div class="company-logo" id="nomoko_company_logo">
+                    <p style="color: white; padding-top: 15px;">PRESTASI</p>
+                </div>
             </div>
             
-            <h2 class="mt-5" style="color: #de1310; font-family: 'BebasNeue', sans-serif;">PRESTASI NASIONAL</h2>
-            <hr>
-            <ul>
-                <li>Medali Emas Kimia - Indonesia Science Academic Competition (2025)</li>
-                <li>Medali Emas Kimia - Olimpiade Pelajar Nusantara (2025)</li>
-                <li>Medali Perunggu Informatika - Pekan Kompetisi Akademik Nasional (2024)</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="contact" class="contact" style="display: none;">
-        <div class="title-bar" id="titleBar" style="background-color: #0078d7;">
-            <div class="title">Hubungi Nouval</div>
-            <div class="window-controls">
-                <div class="window-button close"></div>
+            <div class="timeline" id="floorfy_timeline" style="display:block">
+                <div class="timeline-item">
+                    <p style=" font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">SISTEM MANAJEMEN PRODUKTIVITAS</p>
+                    <p style="font-size: 12px; color: #b8b8b8;"> HTML, CSS, JS, PgAdmin 4 SQL </p>
+                    <p style="font-size: 14px; text-align: justify; width:90%">
+                        Merancang sistem untuk membantu pengelolaan tugas dan aktivitas akademik mahasiswa. 
+                        Menggunakan PgAdmin 4 untuk manajemen basis data yang terstruktur guna menyimpan data aktivitas secara real-time.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <p style=" font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">PLATFORM BIMBEL UTBK-SNBT</p>
+                    <p style="font-size: 12px; color: #b8b8b8;"> Web Development </p>
+                    <p style="font-size: 14px; text-align: justify; width:90%">
+                        Mengembangkan platform bimbingan belajar berbasis web untuk mendukung persiapan UTBK bagi calon mahasiswa. 
+                        Berfokus pada kemudahan navigasi dan penyampaian konten pembelajaran.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <p style=" font-size: 30px; color: #de1310; font-family: 'BebasNeue', sans-serif;">SISTEM KASIR SEDERHANA</p>
+                    <p style="font-size: 12px; color: #b8b8b8;"> Logika Pemrograman Dasar </p>
+                    <p style="font-size: 14px; text-align: justify; width:90%">
+                        Membangun aplikasi kasir yang mengimplementasikan logika algoritma dasar untuk proses transaksi, 
+                        perhitungan stok, dan manajemen inventaris.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="content-light p-4 text-dark">
-            <h1 class="text-center">Mari Berkolaborasi!</h1>
-            <p class="text-center">Email: <b>bagobago955@gmail.com</b></p>
-            <p class="text-center">Lokasi: Indramayu / Semarang, Indonesia</p>
-            <div class="text-center mt-4">
-                <a href="https://muhammadnouvalarrizqy.vercel.app" target="_blank" class="btn btn-primary">Lihat Web Portofolio</a>
-            </div>
-        </div>
     </div>
-
-    <div id="credits" class="credits" style="display: none;">
-        <div class="title-bar" id="titleBar">
-            <div class="title">Keahlian Teknis</div>
-            <div class="window-controls">
-                <div class="window-button close"></div>
-            </div>
-        </div>
-        <div class="content bg-dark text-success p-3" style="font-family: monospace;">
-            <p>Nouval_OS [Version 1.0.2025]</p>
-            <p>C:\Users\Nouval\Skills> dir</p>
-            <br>
-            <p>[Hard Skills]</p>
-            <p>-- Frontend: HTML5, CSS3, JavaScript (Interaktif)</p>
-            <p>-- Backend: Dasar pemrograman sistem</p>
-            <p>-- Database: PgAdmin 4, SQL Management</p>
-            <p>-- UI/UX: Web Design & Prototyping</p>
-            <p>-- 3D Interest: 3D Web Development Enthusiast</p>
-            <br>
-            <p>[Certifications]</p>
-            <p>-- Game Dev (Scratch) - Coursera</p>
-            <p>-- Microsoft Excel - Coursera</p>
-            <p>-- Company Website (Wix) - Coursera</p>
-            <br>
-            <p>C:\Users\Nouval\Skills> <span class="underscore">_</span></p>
-        </div>
-    </div>
-
 </body>
 </html>
