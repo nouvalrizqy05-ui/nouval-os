@@ -1,21 +1,21 @@
-# Joan's OS
+# Nouval's OS
 
 This is the most personal section of my portfolio, where I've created a simulated Windows OS with various desktop tools and references. Through this project, I aim to showcase not only my personal interests but also my skills in HTML and CSS. It's a reflection of both my personal life and my experience as a developer.
 
-You can now explore it [here](https://joan-os.vercel.app/).
+You can now explore it [here](https://nouval-os.vercel.app/).
 ## Links
 
-### Joan's Arcade Machine
-- [Source Code](https://github.com/jrefusta/joan-arcade-machine)
-- [Live Demo](https://joan-arcade-machine.vercel.app/)
+### Nouval's Arcade Machine
+- [Source Code](https://github.com/nouvalrizqy05-ui/nouval-arcade-machine)
+- [Live Demo](https://nouval-arcade-machine.vercel.app/)
 
-### Joan Ramos Refusta's Portfolio
-- [Source Code](https://github.com/jrefusta/joan-portfolio)
-- [Live Demo](https://joanramosrefusta.com/)
+### Muhammad Nouval Ar-Rizqy's Portfolio
+- [Source Code](https://github.com/nouvalrizqy05-ui/portofolio)
+- [Live Demo](https://muhammadnouvalarrizqy.vercel.app/)
 
-### Joan's Art Gallery
-- [Source Code](https://github.com/jrefusta/joan-art-gallery)
-- [Live Demo](https://joan-art-gallery.vercel.app/)
+### Nouval's Art Gallery
+- [Source Code](https://github.com/nouvalrizqy05-ui/nouval-art-gallery)
+- [Live Demo](https://nouval-art-gallery.vercel.app/)
 
 ## Setup
 
