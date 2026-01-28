@@ -1,44 +1,45 @@
 class Experience {
   constructor() {
-    this.companyLogos = document.querySelectorAll(".company-logo");
-    this.timelines = document.querySelectorAll(".timeline");
+    this.experienceWindow = document.getElementById("experience");
+    this.maximizeBtn = document.getElementById("maximize-experience");
+    this.isMaximized = false;
   }
 
   activateEvents() {
-    this.companyLogos.forEach((company) => {
-      if (!company.id) {
-        return;
-      }
-      company.addEventListener("click", () =>
-        this.handleClickOnCompany(company)
-      );
-    });
+    // Menambahkan event listener hanya jika tombol maximize ditemukan
+    if (this.maximizeBtn) {
+      this.maximizeBtn.addEventListener("click", () => this.toggleMaximize());
+    }
   }
+
   deactivateEvents() {
-    this.companyLogos.forEach((company) => {
-      if (!company.id) {
-        return;
-      }
-      company.removeEventListener("click", () =>
-        this.handleClickOnCompany(company)
-      );
-    });
+    // Menghapus event listener dengan cara clone node (cara cepat membersihkan listener)
+    if (this.maximizeBtn) {
+      const newBtn = this.maximizeBtn.cloneNode(true);
+      this.maximizeBtn.parentNode.replaceChild(newBtn, this.maximizeBtn);
+      this.maximizeBtn = newBtn;
+    }
   }
-  handleClickOnCompany = (company) => {
-    const timelineString = company.id.replace("_company_logo", "_timeline");
-    company.classList.add("company-logo-selected");
-    this.companyLogos.forEach((companyLogo) => {
-      if (companyLogo != company) {
-        companyLogo.classList.remove("company-logo-selected");
-      }
-    });
-    const currentTimeline = document.getElementById(timelineString);
-    currentTimeline.style.display = "block";
-    this.timelines.forEach((timeline) => {
-      if (timeline != currentTimeline) {
-        timeline.style.display = "none";
-      }
-    });
-  };
+
+  toggleMaximize() {
+    if (!this.experienceWindow) return;
+
+    if (!this.isMaximized) {
+      // Masuk ke Mode Maximize (Layar Penuh dalam window)
+      this.experienceWindow.classList.add("window-maximized");
+      this.isMaximized = true;
+      
+      // Opsional: Ubah style tombol jika CSS mendukung visual 'restore down'
+      // this.maximizeBtn.classList.add("toggled"); 
+    } else {
+      // Kembali ke Ukuran Normal
+      this.experienceWindow.classList.remove("window-maximized");
+      this.isMaximized = false;
+      
+      // Opsional: Balikkan style tombol
+      // this.maximizeBtn.classList.remove("toggled");
+    }
+  }
 }
+
 export default Experience;

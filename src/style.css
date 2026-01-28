@@ -1390,3 +1390,19 @@ footer .show-desktop hr {
 .expand-apps div:nth-child(1) img {
   width: 2.987rem;
 }
+
+/* CSS untuk mode Maximize */
+.window-maximized {
+    width: 100vw !important;
+    height: calc(100vh - 50px) !important; /* Mengurangi tinggi footer/taskbar */
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Memastikan iframe bersih tanpa padding */
+.experience .content {
+    padding: 0 !important;
+}

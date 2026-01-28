@@ -5,15 +5,11 @@ import AboutMe from "./about-me";
 import Credits from "./credits";
 import Contact from "./contact";
 
+// Inisialisasi global
 const experience = new Experience();
 const aboutMe = new AboutMe();
 const credits = new Credits();
 const contact = new Contact();
-
-experience.activateEvents();
-aboutMe.activateEvents();
-credits.activateEvents();
-contact.activateEvents();
 
 class Desktop {
   constructor() {
@@ -27,24 +23,18 @@ class Desktop {
     this.windowsMenu = document.querySelector(".open-windows-menu");
     this.footer = document.getElementById("footer");
     this.windowsIcon = document.getElementById("windows-icon-section");
-    this.windowsMenu = document.querySelector(".open-windows-menu");
     this.titleBar = document.querySelectorAll(".title-bar");
     this.bottomApps = document.querySelectorAll(".taskbar-app");
     this.currentDate = document.getElementById("current-date");
     this.hoursMinutes = document.getElementById("hours-minutes");
     this.apps = document.querySelectorAll(".apps");
     this.minimizeButtons = document.querySelectorAll(".minimize");
-    this.bottomApps = document.querySelectorAll(".taskbar-app");
     this.closeButtons = document.querySelectorAll(".close");
     this.restoreButtons = document.querySelectorAll(".restore");
   }
 
   activateEvents() {
-    const experience = new Experience();
-    const aboutMe = new AboutMe();
-    const credits = new Credits();
-    const contact = new Contact();
-
+    // Aktifkan event dari class external
     experience.activateEvents();
     aboutMe.activateEvents();
     credits.activateEvents();
@@ -66,6 +56,7 @@ class Desktop {
     setInterval(this.activateDateTimeUpdates, 1000);
     this.activateDateTimeUpdates();
   }
+
   activateMouseUpEvent = () => {
     document.addEventListener("mouseup", () => {
       window.parent.postMessage("mouseup", "*");
@@ -116,6 +107,10 @@ class Desktop {
       this.ds.stop();
     }
     this.element = event.srcElement.parentElement;
+    
+    // Jangan drag jika window sedang maximized (penuh layar)
+    if (this.element.classList.contains("window-maximized")) return;
+
     this.incrementMaxZIndex(this.element);
     this.initialMouseX = event.clientX;
     this.initialMouseY = event.clientY;
@@ -138,7 +133,9 @@ class Desktop {
       }
     });
     const currentBottomApp = document.getElementById(element.id + "_bottom");
-    currentBottomApp.classList.add("taskbar-selected");
+    if (currentBottomApp) {
+        currentBottomApp.classList.add("taskbar-selected");
+    }
     element.style.zIndex = this.maxZIndex + 1;
     ++this.maxZIndex;
   };
@@ -164,6 +161,7 @@ class Desktop {
     this.element.style.left = this.initialWindowX + deltaX + "px";
     this.element.style.top = this.initialWindowY + deltaY + "px";
   };
+
   stopDrag = () => {
     if (this.ds.stopped) {
       this.ds.start();
@@ -175,9 +173,18 @@ class Desktop {
   activateTitleBarEvents = () => {
     this.titleBar.forEach((title_bar) => {
       title_bar.addEventListener("mousedown", this.startDrag);
+      // Double click title bar behavior
       title_bar.addEventListener("dblclick", () => {
-        const minimizeButton = title_bar.querySelector(".minimize");
-        this.resizeWindow(title_bar.parentElement, minimizeButton);
+        const parentWindow = title_bar.parentElement;
+        // Jika window experience, gunakan logika toggle dari class Experience (via click button maximize)
+        if (parentWindow.id === 'experience') {
+            const maxBtn = document.getElementById('maximize-experience');
+            if (maxBtn) maxBtn.click();
+        } else {
+            // Default behavior untuk window lain
+            const minimizeButton = title_bar.querySelector(".minimize");
+            this.resizeWindow(parentWindow, minimizeButton);
+        }
       });
     });
   };
@@ -206,7 +213,6 @@ class Desktop {
       app.addEventListener("dblclick", () => this.openApp(app));
     });
   };
-  deactivateEvents() {}
 
   openApp = (app) => {
     const appName = app.id.replace("_app", "");
@@ -232,8 +238,9 @@ class Desktop {
     const currentWindow = document.getElementById(appName);
     currentWindow.style.display = "block";
     const bottomApp = document.getElementById(appName + "_bottom");
-    bottomApp.classList.add("taskbar-opened");
+    if (bottomApp) bottomApp.classList.add("taskbar-opened");
     this.incrementMaxZIndex(currentWindow);
+    
     currentWindow.addEventListener("mousedown", (event) => {
       if (!this.ds.stopped) {
         this.ds.stop();
@@ -246,58 +253,68 @@ class Desktop {
       }
     });
   };
+
   activateMinimizeButtons = () => {
     this.minimizeButtons.forEach((minimizeButton) => {
       minimizeButton.addEventListener("click", () => {
-        const currentWindow =
-          minimizeButton.parentElement.parentElement.parentElement;
-        this.resizeWindow(currentWindow, minimizeButton);
+        const currentWindow = minimizeButton.closest('.experience') || minimizeButton.closest('.about-me') || minimizeButton.closest('.contact') || minimizeButton.closest('.credits');
+        
+        // Skip resize logic for Experience since it handles its own maximize via restore button
+        if (currentWindow && currentWindow.id === 'experience') return;
+
+        if (currentWindow) {
+            this.resizeWindow(currentWindow, minimizeButton);
+        }
       });
     });
   };
+
   activateCloseButtons = () => {
     this.closeButtons.forEach((closeButton) => {
       closeButton.addEventListener("click", () => {
-        const currentWindow =
-          closeButton.parentElement.parentElement.parentElement;
+        const currentWindow = closeButton.parentElement.parentElement.parentElement;
 
-        const timelines = currentWindow.querySelectorAll(".timeline");
-        const companyLogos = currentWindow.querySelectorAll(".company-logo");
+        // Reset style
         currentWindow.removeAttribute("style");
+        // Hapus class maximized jika ada (khusus experience)
+        currentWindow.classList.remove("window-maximized");
+
         const content =
           currentWindow.id == "contact"
             ? currentWindow.querySelector(".content-light")
             : currentWindow.querySelector(".content");
-        if (currentWindow.id == "experience") {
-          timelines.forEach((timeline) => {
-            timeline.style.display = "none";
-          });
-
-          companyLogos.forEach((companyLogo) => {
-            if (companyLogo.classList.contains("company-logo-selected")) {
-              companyLogo.classList.remove("company-logo-selected");
-            }
-          });
-        }
-        content.scrollTo(0, 0);
+        
+        // HAPUS KODE LAMA EXPERIENCE DI SINI YANG MENYEBABKAN ERROR
+        // Kita hanya perlu mereset scroll dan menyembunyikan window
+        
+        if (content) content.scrollTo(0, 0);
+        
         currentWindow.style.display = "none";
         const bottomApp = document.getElementById(currentWindow.id + "_bottom");
-        if (bottomApp.classList.contains("taskbar-opened")) {
-          bottomApp.classList.remove("taskbar-opened");
-        }
-        if (bottomApp.classList.contains("taskbar-selected")) {
-          bottomApp.classList.remove("taskbar-selected");
+        if (bottomApp) {
+            if (bottomApp.classList.contains("taskbar-opened")) {
+            bottomApp.classList.remove("taskbar-opened");
+            }
+            if (bottomApp.classList.contains("taskbar-selected")) {
+            bottomApp.classList.remove("taskbar-selected");
+            }
         }
       });
     });
   };
+
   activateRestoreButtons = () => {
     this.restoreButtons.forEach((restore) => {
+      // PENTING: Jangan tambahkan event 'hide window' ke tombol maximize experience
+      if (restore.id === 'maximize-experience') {
+          return; 
+      }
+
       restore.addEventListener("click", () => {
         const currentWindow = restore.parentElement.parentElement.parentElement;
         currentWindow.style.display = "none";
         const bottomApp = document.getElementById(currentWindow.id + "_bottom");
-        if (bottomApp.classList.contains("taskbar-selected")) {
+        if (bottomApp && bottomApp.classList.contains("taskbar-selected")) {
           bottomApp.classList.remove("taskbar-selected");
         }
       });
@@ -341,4 +358,5 @@ class Desktop {
     currentWindow.style.height = offset + "vh";
   };
 }
+
 export default Desktop;
